@@ -1,38 +1,28 @@
-class Producto {
-  constructor(nombre, precio, categoria) {
-    this.id
+class producto {
+  constructor(id, nombre, precio) {
+    this.id = id;
     this.nombre = nombre;
     this.precio = precio;
   }
 }
 
-let Producto = [];
+const productoTodos = [];
 
-function agregarProducto(id, nombre, precio) {
-  let nuevoProducto = new Producto(id, nombre, precio);
-  inventario.push(nuevoProducto);
-  console.log(`Producto ${nombre} agregado correctamente.`);
+const producto0 = new producto (0, "Destornillador" , 50);
+const producto1 = new producto (1, "Taladro" , 2000);
+const producto2 = new producto (2, "Clavo" , 2);
+const producto3 = new producto (3, "Pinza" , 50);
+const producto4 = new producto (4, "Martillo" , 50);
+
+productoTodos.push(producto0, producto1, producto2, producto3, producto4);
+
+const buscarProducto = prompt("Bienvenido a la ferretería! Tenemos Destornillador , Taladro , Clavo , Pinza y Martillo . Indíquenos por qué articulo está interesado");
+
+const identificarProducto = productoTodos.find ( (producto)=> producto.nombre.toLowerCase() == buscarProducto.toLowerCase());
+
+if (identificarProducto){
+  alert( `El ${identificarProducto.nombre} está disponible por ${identificarProducto.precio}`);
+} else {
+  alert("Lo sentimos, el producto que busca no está disponible.");
 }
 
-
-function mostrarProductos() {
-  // Ordenamos el inventario alfabéticamente por nombre
-  inventario.sort((a, b) => a.nombre.localeCompare(b.nombre));
-  inventario.forEach(producto => {
-    console.log(`Nombre: ${producto.nombre}, Precio: ${producto.precio}, Categoría: ${producto.categoria}`);
-  });
-}
-
-// Interacción con el usuario
-let nombre = prompt("Ingresa el nombre del producto:");
-let precio = prompt("Ingresa el precio del producto:");
-let categoria = prompt("Ingresa la categoría del producto:");
-
-agregarProducto(nombre, precio, categoria);
-
-mostrarProductos();
-
-nombre = prompt("Ingresa el nombre del producto que deseas comprar, tenemos Destornillador , Taladro , Pinza , Martillo , Clavos ");
-comprarProducto(nombre);
-
-mostrarProductos();
