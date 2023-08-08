@@ -17,7 +17,7 @@ const producto4 = new producto (4, "Martillo" , 250, 5);
 
 productoTodos.push(producto0, producto1, producto2, producto3, producto4);
 
-const buscarProducto = prompt("Bienvenido a la ferretería! Tenemos Destornillador , Taladro , Clavo , Pinza y Martillo . Indíquenos por qué articulo está interesado");
+const buscarProducto = prompt("Bienvenido a la ferretería! Tenemos Destornillador , Taladro , Clavo , Tornillo y Martillo . Indíquenos por qué articulo está interesado");
 
 const identificarProducto = productoTodos.find ( (producto)=> producto.nombre.toLowerCase() == buscarProducto.toLowerCase());
 
