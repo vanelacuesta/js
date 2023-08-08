@@ -22,7 +22,7 @@ const buscarProducto = prompt("Bienvenido a la ferretería! Tenemos Destornillad
 const identificarProducto = productoTodos.find ( (producto)=> producto.nombre.toLowerCase() == buscarProducto.toLowerCase());
 
 if (identificarProducto){
-  alert( `Tenemos ${identificarProducto.nombre}s disponibles y su precio es $ ${identificarProducto.precio} apurate que sólo nos quedan ${identificarProducto.stock}!`);
+  alert( `Tenemos ${identificarProducto.nombre}s disponibles y su precio es $ ${identificarProducto.precio} ¡Apurate que sólo nos quedan ${identificarProducto.stock}!`);
 } else {
   alert("Lo sentimos, el producto que busca no está disponible.");
 }
