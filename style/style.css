@@ -6,7 +6,12 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 2vw;
+    gap: 1vw;
+}
+@media (max-width:400px) {
+    #productos-container{
+        grid-template-columns: 1fr;
+    }
 }
 #productos-container .card{
     margin: 1vw;
@@ -17,14 +22,35 @@
     border: solid 1px gray;
     border-radius: 20px;
 }
+@media (max-width:400px) {
+    #productos-container .card{
+        margin: 3vw;
+    }
+}
+
 #productos-container .card figure{
     width: 20vw;
+}
+@media (max-width:400px) {
+    #productos-container .card figure{
+        width: 70vw;
+    }
 }
 #productos-container .card h2{
     text-align: center;
     width: 100%;
+    font-size: 1rem;
 }
 #productos-container .card figure img{
     width: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#productos-container .card .button-card{
+    margin: 10px;
+    border-radius: 20px;
+    background-color: black;
+}
+#productos-container .card .button-card h3{
+    padding: 5px;
+    color: aliceblue;
 }
