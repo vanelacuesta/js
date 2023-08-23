@@ -1,4 +1,4 @@
-class producto {
+/* class producto {
   constructor(id, nombre, precio, stock) {
     this.id = id;
     this.nombre = nombre;
@@ -26,4 +26,24 @@ if (identificarProducto){
 } else {
   alert("Lo sentimos, el producto que busca no está disponible.");
 }
+ */
+console.log(productos)
+const productosContainer = document.querySelector("#productos-container")
 
+const cardsAHtml = array => {
+
+  const cards = array.reduce((acc, element) => {
+      return acc + `
+      <div class="card" id="card-${element.id}">
+        <figure>
+          <img src=${element.imagen|| "./img/not-found.jpg"} alt="${element.name}">
+        </figure>
+        <h2>
+        ${element.name} ${element.marca}
+        </h2>
+      </div>
+  `
+  }, "")
+  productosContainer.innerHTML = cards
+}
+cardsAHtml(productos)

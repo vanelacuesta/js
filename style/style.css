@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding: 0;
+}
+#productos-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2vw;
+}
+#productos-container .card{
+    margin: 1vw;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    border: solid 1px gray;
+    border-radius: 20px;
+}
+#productos-container .card figure{
+    width: 20vw;
+}
+#productos-container .card h2{
+    text-align: center;
+    width: 100%;
+}
+#productos-container .card figure img{
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
