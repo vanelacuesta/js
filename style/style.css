@@ -21,6 +21,7 @@
     justify-items: center;
     border: solid 1px gray;
     border-radius: 20px;
+    overflow: hidden;
 }
 @media (max-width:400px) {
     #productos-container .card{
@@ -44,6 +45,12 @@
 #productos-container .card figure img{
     width: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#productos-container .card:hover > figure img{
+    transform: scale(1.3);
+}
+#productos-container .card:hover > h2{
+    visibility: hidden;
 }
 #productos-container .card .button-card{
     margin: 10px;

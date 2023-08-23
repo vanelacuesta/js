@@ -37,7 +37,7 @@ const eventoCards = ( nodos, array ) => {
              agregadosAlCarrito.push(buscarProducto)
              localStorage.setItem("productos", JSON.stringify(agregadosAlCarrito))
              Toastify({
-                 text: `¡Se ha añadido  ${ buscarProducto.name } a tu carrito!`,
+                 text: `¡Se ha añadido  ${ buscarProducto.name} ${buscarProducto.marca } a tu carrito!`,
                  duration: 3000,
                  gravity: "bottom",
                  close: true,
