@@ -4,6 +4,7 @@
 }
 #productos-container{
     width: 100%;
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1vw;
@@ -16,9 +17,11 @@
 #productos-container .card{
     margin: 1vw;
     width: auto;
+    height: 40vh;
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+    align-content: space-between;
     border: solid 1px gray;
     border-radius: 20px;
     overflow: hidden;
@@ -29,12 +32,14 @@
     }
 }
 
-#productos-container .card figure{
-    width: 20vw;
+#productos-container .card .container-img{
+    width: 100%;
+    overflow: hidden;
+    display: block;
 }
 @media (max-width:400px) {
-    #productos-container .card figure{
-        width: 70vw;
+    #productos-container .card .container-img{
+        width: 100%;
     }
 }
 #productos-container .card h2{
@@ -42,22 +47,28 @@
     width: 100%;
     font-size: 1rem;
 }
-#productos-container .card figure img{
+#productos-container .card .container-img img{
     width: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-#productos-container .card:hover > figure img{
-    transform: scale(1.3);
-}
+
 #productos-container .card:hover > h2{
     visibility: hidden;
 }
+
 #productos-container .card .button-card{
-    margin: 10px;
+    margin: 5px;
     border-radius: 20px;
     background-color: black;
+    display: flex;
+    justify-content: center;
 }
 #productos-container .card .button-card h3{
-    padding: 5px;
+    padding: 1px;
     color: aliceblue;
+    font-size: 1rem;
+    margin: 1px;
+}
+.offcanvas{
+    background-color: rgba(36, 36, 36, 0.815);
 }
