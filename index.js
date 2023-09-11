@@ -28,7 +28,7 @@ const cardsAHtml = data => {
                     <img src=${elemento.images[0] || "./img/not-found.jpg" } alt=${elemento.title}>
                 </div>
                 <h2>${elemento.title}</h2>
-                <div class="precio">$${elemento.price}</div> <!-- Aquí se muestra el precio -->
+                <div class="precio">$${elemento.price}</div> 
                 <button class="button-card" id="button-${elemento.id}">
                     <i class="fas fa-shopping-cart button-card" id="button-${elemento.id}"></i>
                 </button>
