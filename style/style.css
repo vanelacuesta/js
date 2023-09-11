@@ -61,7 +61,6 @@
     bottom: 0;
     background-color: #b5b3b39b;
     margin: 0;
-    z-index: 99999999999;
 }
 
 #productos-container .card .container-img img {
@@ -96,6 +95,9 @@
     color: #fff; 
     background-color: rgba(0,0,0,0.6); 
 }
+#carritoModal{
+    z-index: 9999999999;
+}
 
 #carritoModal .modal-content {
     background-color: #f4f4f4;
@@ -129,12 +131,12 @@
 }
 #productos-container .card .precio {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
     position: absolute;
     left: 10%;
     top: 10%;
     background-color: #f4f4f4cb;
     border-radius: 10px;
     padding: 3px;
-    width: 10vh;
+    width: 15vh;
 }
